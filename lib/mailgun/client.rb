@@ -15,7 +15,7 @@ module Mailgun
                    api_version = 'v3',
                    ssl = true,
                    test_mode = false,
-                   timeout = nil)
+                   timeout = 60)
 
       endpoint = endpoint_generator(api_host, api_version, ssl)
       @http_client = RestClient::Resource.new(endpoint,
